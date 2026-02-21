@@ -1,0 +1,137 @@
+/* Partners Section - Simple Design */
+.partners-section {
+    padding: 10px;
+    /* background: var(--bg-darker); */
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+}
+
+.partners-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.partners-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.partners-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.partners-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.partner-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    min-height: 100px;
+}
+
+.partner-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    background: var(--bg-card-hover);
+}
+
+.partner-card img {
+    max-width: 100%;
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+@media (max-width: 1024px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 50px 5%;
+    }
+
+    .partners-header {
+        margin-bottom: 30px;
+    }
+
+    .partners-title {
+        font-size: 1.75rem;
+    }
+
+    .partners-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .partner-card {
+        padding: 20px;
+        min-height: 80px;
+    }
+
+    .partner-card img {
+        max-height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-section {
+        padding: 40px 5%;
+    }
+
+    .partners-header {
+        margin-bottom: 24px;
+    }
+
+    .partners-title {
+        font-size: 1.5rem;
+    }
+
+    .partners-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .partners-grid {
+        gap: 12px;
+    }
+
+    .partner-card {
+        padding: 16px;
+        min-height: 70px;
+    }
+
+    .partner-card img {
+        max-height: 40px;
+    }
+}
